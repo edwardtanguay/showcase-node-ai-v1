@@ -6,6 +6,7 @@
 	"scripts": {
 		"dev": "conc \"npm run api\" \"npm run frontend\"",
 		"api": "nodemon",
+		"testai": "tsx backend/cli/testai.ts",
 		"frontend": "vite --port 3200 --open",
 		"build": "tsc && vite build",
 		"lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
@@ -20,6 +21,8 @@
 		"exec": "tsx backend/api/index.ts"
 	},
 	"dependencies": {
+		"@ai-sdk/openai": "^1.2.1",
+		"ai": "^4.1.54",
 		"axios": "^1.7.9",
 		"cors": "^2.8.5",
 		"dayjs": "^1.11.10",
